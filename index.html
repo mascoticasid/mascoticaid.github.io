@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>Mascotica ID - Your Pet's Digital Identity</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@300;400;500&family=Baloo+2:wght@400;600&display=swap" rel="stylesheet">
     <style>
@@ -211,44 +212,26 @@
         }
 
         .form-container {
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group input,
-        .form-group select {
+        .brevo-form {
             width: 100%;
-            padding: 12px;
+            max-width: 540px;
+            height: 305px;
             border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin: 0 auto;
+            display: block;
         }
 
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: 3px solid var(--gold);
-        }
-
-        .submit-btn {
-            background: var(--gold);
-            color: var(--charcoal);
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s;
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            transform: scale(1.05);
+        @media (max-width: 768px) {
+            .brevo-form {
+                height: 350px;
+                max-width: 100%;
+            }
         }
 
         /* Footer */
@@ -319,7 +302,7 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <img src="https://github.com/mascoticasid/marketing/blob/main/log-mascoticasid.png?raw=true" alt="Mascotica ID Logo">
+                <img src="https://github.com/mascoticasid/mascoticaid.github.io/blob/main/log-mascoticasid.png?raw=true" alt="Mascotica ID Logo">
                 <span class="logo-text">Mascotica ID</span>
             </div>
             <ul class="nav-links">
@@ -372,37 +355,13 @@
             <h2>¡Sé de los Primeros!</h2>
             <p>Regístrate para acceso temprano y ayúdanos a crear la mejor experiencia para ti y tu mascota.</p>
             
-            <form class="form-container" action="#" method="POST" id="earlyAccessForm">
-                <div class="form-group">
-                    <input type="text" name="nombre" placeholder="Tu nombre completo" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Tu correo electrónico" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="mascota_nombre" placeholder="Nombre de tu mascota">
-                </div>
-                <div class="form-group">
-                    <select name="tipo_mascota">
-                        <option value="">Tipo de mascota (opcional)</option>
-                        <option value="perro">Perro</option>
-                        <option value="gato">Gato</option>
-                        <option value="ave">Ave</option>
-                        <option value="otro">Otro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <select name="interes" required>
-                        <option value="">¿Qué te interesa más?</option>
-                        <option value="identidad_digital">Identidad digital segura</option>
-                        <option value="historial_medico">Historial médico digital</option>
-                        <option value="comunidad">Comunidad de mascotas</option>
-                        <option value="servicios">Conexión con servicios</option>
-                        <option value="todo">Todo lo anterior</option>
-                    </select>
-                </div>
-                <button type="submit" class="submit-btn">¡Quiero Acceso Temprano!</button>
-            </form>
+            <div class="form-container">
+                <iframe class="brevo-form" 
+                        src="https://cf585157.sibforms.com/serve/MUIFAAr_A8jPo15WCgFnsSW41FEcCG0a7l79tRIV9VAyolAfVGHZm4G1s9p0xIJitYwfcIxnnsYEj-j5QVrFwVo-UittAaZpnd76iAkiKylPlDESuk32KX3K4-X2Vx5wgv0VslQ-0JYH5l1cqgGbMFtbT_GOVNJeqmuT3OJ3R1DH7SZOVHQYKF1c9p4J6wmx9YFqiQ-WXl1G1Jvx" 
+                        scrolling="auto" 
+                        allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </section>
 
@@ -439,17 +398,6 @@
                     });
                 }
             });
-        });
-
-        // Form submission handler
-        document.getElementById('earlyAccessForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Aquí puedes integrar con Brevo o cualquier otro servicio
-            alert('¡Gracias por tu interés! Te contactaremos pronto con novedades sobre Mascotica ID.');
-            
-            // Reset form
-            this.reset();
         });
 
         // Add animation on scroll
