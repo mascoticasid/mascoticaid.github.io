@@ -190,6 +190,178 @@
             color: var(--petrol-blue);
         }
 
+        /* Profile Preview Section */
+        .profile-preview {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f4f8 100%);
+        }
+
+        .profile-preview h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--petrol-blue);
+        }
+
+        .profile-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .profile-text {
+            padding: 2rem;
+        }
+
+        .profile-text h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--petrol-blue);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .profile-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .profile-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .profile-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .profile-features li::before {
+            content: "✓";
+            color: var(--sky-blue);
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .phone-mockup {
+            background: var(--charcoal);
+            border-radius: 30px;
+            padding: 20px;
+            max-width: 300px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .phone-screen {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        .pet-header {
+            text-align: center;
+            padding: 15px 0;
+            border-bottom: 2px solid var(--sky-blue);
+            margin-bottom: 15px;
+        }
+
+        .pet-name {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--petrol-blue);
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .pet-breed {
+            color: var(--charcoal);
+            opacity: 0.8;
+        }
+
+        .qr-code {
+            width: 80px;
+            height: 80px;
+            background: var(--petrol-blue);
+            margin: 10px auto;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .info-item {
+            background: #f8f9ff;
+            padding: 8px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .info-label {
+            font-size: 0.7rem;
+            color: var(--charcoal);
+            opacity: 0.7;
+            margin-bottom: 3px;
+        }
+
+        .info-value {
+            font-weight: 600;
+            color: var(--petrol-blue);
+            font-size: 0.8rem;
+        }
+
+        .medical-section {
+            background: #fff8f0;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .medical-title {
+            font-weight: 600;
+            color: var(--petrol-blue);
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .medical-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .profile-preview h2 {
+                font-size: 2rem;
+            }
+        }
         /* Early Access Form */
         .early-access {
             background: linear-gradient(45deg, var(--petrol-blue), var(--sky-blue));
@@ -327,10 +499,10 @@
 
     <section class="hero">
         <div class="container">
-            <h1>La Identidad Digital de tu Mascota</h1>
+            <h1>La Cédula Digital de tu Perro</h1>
             <div class="tagline">Your Pet's Digital Identity</div>
-            <p>Revoluciona la forma en que cuidas y proteges a tu mascota con tecnología innovadora que crea una identidad digital segura y confiable.</p>
-            <a href="#early-access" class="cta-button">¡Únete a la Lista de Espera!</a>
+            <p>Digitaliza toda la información de tu mascota: vacunas, historial médico, peso, alergias y más. Con un código QR único que garantiza acceso inmediato en emergencias y viajes.</p>
+            <a href="#early-access" class="cta-button">¡Crea la ID Digital de tu Perro!</a>
         </div>
     </section>
 
@@ -362,10 +534,86 @@
         </div>
     </section>
 
+    <section class="profile-preview">
+        <div class="container">
+            <h2>Así se verá el Perfil Digital de tu Perro</h2>
+            <div class="profile-container">
+                <div class="profile-text">
+                    <h3>Información Completa al Alcance de un Escaneo</h3>
+                    <p>Cuando crees el perfil de tu mascota, obtendrás una identificación digital completa que incluye:</p>
+                    <ul class="profile-features">
+                        <li>Código QR único como cédula digital</li>
+                        <li>Historial médico completo y actualizado</li>
+                        <li>Registro de vacunas con fechas</li>
+                        <li>Información de alergias y medicamentos</li>
+                        <li>Datos de contacto de emergencia</li>
+                        <li>Evolución de peso y crecimiento</li>
+                        <li>Acceso instantáneo para veterinarios</li>
+                    </ul>
+                    <p><strong>¿La ventaja?</strong> En cualquier emergencia o viaje, cualquier veterinario podrá acceder a toda la información de tu mascota en segundos.</p>
+                </div>
+                <div class="phone-mockup">
+                    <div class="phone-screen">
+                        <div class="pet-header">
+                            <div class="pet-name">Max</div>
+                            <div class="pet-breed">Golden Retriever • 3 años</div>
+                            <div class="qr-code">
+                                <div>QR<br>CODE</div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-label">Peso Actual</div>
+                                <div class="info-value">28.5 kg</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Chip ID</div>
+                                <div class="info-value">982000123456</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Última Visita</div>
+                                <div class="info-value">15/Sept/2025</div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-label">Estado</div>
+                                <div class="info-value">Saludable</div>
+                            </div>
+                        </div>
+
+                        <div class="medical-section">
+                            <div class="medical-title">📋 Historial Reciente</div>
+                            <div class="medical-item">
+                                <span>Vacuna Rabia</span>
+                                <span>✓ Vigente</span>
+                            </div>
+                            <div class="medical-item">
+                                <span>Desparasitación</span>
+                                <span>15/Sept</span>
+                            </div>
+                            <div class="medical-item">
+                                <span>Chequeo General</span>
+                                <span>Normal</span>
+                            </div>
+                        </div>
+
+                        <div class="medical-section">
+                            <div class="medical-title">⚠️ Alergias</div>
+                            <div class="medical-item">
+                                <span>Pollo</span>
+                                <span>Leve</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="early-access" id="early-access">
         <div class="container">
-            <h2>¡Sé de los Primeros!</h2>
-            <p>Regístrate para acceso temprano y ayúdanos a crear la mejor experiencia para ti y tu mascota.</p>
+            <h2>¡Crea la Primera Cédula Digital de tu Perro!</h2>
+            <p>Únete a los primeros usuarios que revolucionarán el cuidado de sus mascotas con identidad digital y código QR único.</p>
             
             <div class="form-container">
                 <iframe class="brevo-form" 
