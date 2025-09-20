@@ -212,14 +212,14 @@
         }
 
         .form-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
         }
 
         .brevo-form {
             width: 100%;
-            max-width: 540px;
-            height: 305px;
+            max-width: 600px;
+            height: 600px;
             border: none;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -229,8 +229,20 @@
 
         @media (max-width: 768px) {
             .brevo-form {
-                height: 350px;
+                height: 650px;
                 max-width: 100%;
+                border-radius: 10px;
+            }
+            
+            .form-container {
+                max-width: 95%;
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brevo-form {
+                height: 700px;
             }
         }
 
@@ -357,7 +369,7 @@
             
             <div class="form-container">
                 <iframe class="brevo-form" 
-                        src="https://cf585157.sibforms.com/serve/MUIFAF-g_4r58cSaHk0EQPyzL9poUwstyxMOIruz6gI5EI4Mm6Y7yBcacBbjliAU6RmElpN_lMc5HCkTs7mQLkW8iNg4C-dm4ycXN6h44bonlJcInyjDwJycrMlvskBidqIhzEYPrU3AFhX3Eui1f3l6M9Gpnil2hD12p_tz-yI--svDlXeezrHh0GfApPNCXhA8WYJ9lCsli4XQ" 
+                        src="https://cf585157.sibforms.com/serve/MUIFAEJZl3xFeoFFc8T4VNKxhFkBXGJMOhfu6LfEu58Ay4nIeP_LeWsTCHyqEcWrE8PWkNYTQmwuaeVCTYLfedv76qZgDnfgDsmr0DfU11ENhOanJ43Wj6o3a34eHYmlLgQOd60I3Y4ailuQFz43aZxJpJDmNA3UZvkEK3BsGMKbNuEZfipC9aOSgw-egSpMHFITrk7B97ruQn6c" 
                         scrolling="auto" 
                         allowfullscreen>
                 </iframe>
